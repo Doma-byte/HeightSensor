@@ -1,6 +1,7 @@
 #include <LiquidCrystal.h>
 
-LiquidCrystal lcd(6, 7, 5, 4, 3, 2); // Adjust the pin numbers according to your LCD connections
+//Pin numbers
+LiquidCrystal lcd(6, 7, 5, 4, 3, 2); 
 
 const int trigPin = 11;
 const int echoPin = 10;
@@ -10,7 +11,7 @@ float distanceCm;
 float distanceInch;
 int b;
 
-// Define sound speed in cm/uS
+//Sound speed in cm/uS
 #define SOUND_SPEED 0.034
 #define CM_TO_INCH 0.393701
 
@@ -19,7 +20,8 @@ void setup() {
   pinMode(trigPin, OUTPUT);
   pinMode(echoPin, INPUT);
 
-  lcd.begin(16, 2); // Initializes the interface to the LCD screen, and specifies the dimensions (width and height) of the display
+//Dimensions (width and height) of the display
+  lcd.begin(16, 2);
   lcd.print("   Your Height");
   lcd.print("      Measurement");
   delay(3000);
